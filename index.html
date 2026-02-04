@@ -1,86 +1,134 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitrium Network | Future of Mobile Mining</title>
+    <title>Bitrium Network | Global Mining</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; }
-        .neon-text { text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc; }
-        .neon-border { border: 1px solid #00ffcc; box-shadow: 0 0 15px rgba(0, 255, 204, 0.2); }
-        .hero-gradient { background: radial-gradient(circle at center, #00332e 0%, #050505 70%); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .neon-text { text-shadow: 0 0 15px #00ffcc; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .btn-premium { background: linear-gradient(45deg, #00ffcc, #0099ff); color: black; font-weight: bold; transition: 0.3s; }
+        .btn-premium:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0, 255, 204, 0.3); }
     </style>
 </head>
-<body class="hero-gradient">
+<body>
 
-    <nav class="flex justify-between items-center p-6 max-w-6xl mx-auto">
-        <div class="text-2xl font-bold tracking-tighter neon-text">BITRIUM</div>
-        <div class="space-x-6 hidden md:block">
-            <a href="#features" class="hover:text-cyan-400 transition">О проекте</a>
-            <a href="#tokenomics" class="hover:text-cyan-400 transition">Токеномика</a>
-            <a href="#" class="px-5 py-2 neon-border rounded-full text-sm">Whitepaper</a>
-        </div>
+    <nav class="fixed w-full z-50 glass py-4 px-6 flex justify-between items-center">
+        <div class="text-2xl font-black neon-text tracking-tighter">BITRIUM</div>
+        
+        <select id="langSwitcher" class="bg-black border border-zinc-700 text-white text-sm rounded-lg p-2 outline-none focus:border-cyan-500">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="tr">Türkçe</option>
+            <option value="zh">中文</option>
+        </select>
     </nav>
 
-    <header class="text-center py-20 px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-6">Майни <span class="text-cyan-400">BITRIUM</span> <br>прямо в телефоне</h1>
-        <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-lg">
-            Первая мобильная сеть с экологичным майнингом. Начни зарабатывать токены BIT уже сегодня, используя только свой смартфон.
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div class="absolute w-64 h-64 bg-cyan-500/10 rounded-full blur-[120px] -z-10"></div>
+        
+        <h1 id="heroTitle" class="text-5xl md:text-8xl font-black mb-6 leading-tight">
+            MINING THE <br><span class="text-cyan-400">FUTURE</span>
+        </h1>
+        <p id="heroDesc" class="text-gray-400 max-w-xl text-lg mb-10">
+            Start mining BIT tokens today. Fast, secure, and energy-efficient mobile network.
         </p>
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="ТВОЯ_ССЫЛКА_НА_APK" class="bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-4 px-10 rounded-xl transition transform hover:scale-105">
-                <i class="fab fa-android mr-2"></i> СКАЧАТЬ APK
-            </a>
-            <a href="#features" class="border border-gray-700 hover:border-cyan-500 py-4 px-10 rounded-xl transition">
-                Узнать больше
-            </a>
-        </div>
-    </header>
 
-    <section id="features" class="max-w-6xl mx-auto py-20 px-4 grid md:grid-cols-3 gap-8">
-        <div class="bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 hover:border-cyan-900 transition">
-            <i class="fas fa-bolt text-3xl text-cyan-400 mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Cloud Mining</h3>
-            <p class="text-gray-500">Майнинг не тратит заряд батареи и не нагревает процессор вашего устройства.</p>
+        <a href="ССЫЛКА_НА_ТВОЙ_APK" class="btn-premium px-12 py-5 rounded-2xl text-xl flex items-center">
+            <i class="fab fa-android mr-3 text-2xl"></i> 
+            <span id="btnDownload">DOWNLOAD APK</span>
+        </a>
+    </section>
+
+    <section class="max-w-6xl mx-auto py-20 px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass p-8 rounded-3xl">
+            <i class="fas fa-microchip text-3xl text-cyan-400 mb-4"></i>
+            <h3 id="feat1Title" class="text-xl font-bold mb-2">Eco-Mining</h3>
+            <p id="feat1Desc" class="text-gray-500">No battery drain. No overheating. Only pure cloud power.</p>
         </div>
-        <div class="bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 hover:border-cyan-900 transition">
+        <div class="glass p-8 rounded-3xl">
             <i class="fas fa-users text-3xl text-cyan-400 mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Referral System</h3>
-            <p class="text-gray-500">Приглашай друзей и получай +0.10x к скорости добычи за каждого активного майнера.</p>
+            <h3 id="feat2Title" class="text-xl font-bold mb-2">Community</h3>
+            <p id="feat2Desc" class="text-gray-500">Get +0.10x boost for every friend you invite to the network.</p>
         </div>
-        <div class="bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 hover:border-cyan-900 transition">
-            <i class="fas fa-shield-halved text-3xl text-cyan-400 mb-4"></i>
-            <h3 class="text-xl font-bold mb-2">Secure Wallet</h3>
-            <p class="text-gray-500">Твои токены защищены децентрализованными протоколами и Firebase Auth.</p>
-        </div>
-    </section>
-
-    <section class="bg-zinc-900/30 py-16">
-        <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center gap-8">
-            <div>
-                <div class="text-3xl font-bold text-white">100K+</div>
-                <div class="text-gray-500 text-sm uppercase">Пользователей</div>
-            </div>
-            <div>
-                <div class="text-3xl font-bold text-white">24/7</div>
-                <div class="text-gray-500 text-sm uppercase">Аптайм</div>
-            </div>
-            <div>
-                <div class="text-3xl font-bold text-white">0.00$</div>
-                <div class="text-gray-500 text-sm uppercase">Комиссия</div>
-            </div>
-            <div>
-                <div class="text-3xl font-bold text-white">0.10x</div>
-                <div class="text-gray-500 text-sm uppercase">Бонус</div>
-            </div>
+        <div class="glass p-8 rounded-3xl">
+            <i class="fas fa-wallet text-3xl text-cyan-400 mb-4"></i>
+            <h3 id="feat3Title" class="text-xl font-bold mb-2">Secure Wallet</h3>
+            <p id="feat3Desc" class="text-gray-500">Manage your assets with top-tier security protocols.</p>
         </div>
     </section>
 
-    <footer class="text-center py-10 text-gray-600 border-t border-zinc-900 mt-10">
-        <p>&copy; 2026 Bitrium Network Project. All rights reserved.</p>
-    </footer>
+    <script>
+        const translations = {
+            en: {
+                heroTitle: "MINING THE <br><span class='text-cyan-400'>FUTURE</span>",
+                heroDesc: "Start mining BIT tokens today. Fast, secure, and energy-efficient mobile network.",
+                btnDownload: "DOWNLOAD APK",
+                feat1Title: "Eco-Mining", feat1Desc: "No battery drain. No overheating. Only pure cloud power.",
+                feat2Title: "Community", feat2Desc: "Get +0.10x boost for every friend you invite to the network.",
+                feat3Title: "Secure Wallet", feat3Desc: "Manage your assets with top-tier security protocols."
+            },
+            ru: {
+                heroTitle: "МАЙНИНГ <br><span class='text-cyan-400'>БУДУЩЕГО</span>",
+                heroDesc: "Начни добывать токены BIT сегодня. Быстрая, безопасная и энергоэффективная мобильная сеть.",
+                btnDownload: "СКАЧАТЬ APK",
+                feat1Title: "Эко-Майнинг", feat1Desc: "Нет разряда батареи. Нет перегрева. Только облачная мощь.",
+                feat2Title: "Сообщество", feat2Desc: "Получи +0.10x буст за каждого друга, приглашенного в сеть.",
+                feat3Title: "Кошелек", feat3Desc: "Управляй активами с протоколами защиты высшего уровня."
+            },
+            tr: {
+                heroTitle: "GELECEĞİ <br><span class='text-cyan-400'>KAZIN</span>",
+                heroDesc: "BIT tokenlarını bugün kazmaya başlayın. Hızlı, güvenli ve verimli mobil ağ.",
+                btnDownload: "APK İNDİR",
+                feat1Title: "Eko-Madencilik", feat1Desc: "Pil tüketimi yok. Isınma yok. Sadece bulut gücü.",
+                feat2Title: "Topluluk", feat2Desc: "Ağa davet ettiğiniz her arkadaş için +0.10x bonus kazanın.",
+                feat3Title: "Güvenli Cüzdan", feat3Desc: "Varlıklarınızı en üst düzey güvenlik protokolleriyle yönetin."
+            },
+            zh: {
+                heroTitle: "挖掘<br><span class='text-cyan-400'>未来</span>",
+                heroDesc: "立即开始挖掘 BIT 代币。快速、安全且节能的移动网络。",
+                btnDownload: "下载 APK",
+                feat1Title: "生态挖矿", feat1Desc: "不耗电。不发热。纯净云算力。",
+                feat2Title: "社区", feat2Desc: "每邀请一位朋友，矿速增加 +0.10x。",
+                feat3Title: "安全钱包", feat3Desc: "使用顶层安全协议管理您的资产。"
+            },
+            de: {
+                heroTitle: "MINING DER <br><span class='text-cyan-400'>ZUKUNFT</span>",
+                heroDesc: "Beginnen Sie heute mit dem Mining von BIT-Token. Schnelles, sicheres und effizientes mobiles Netzwerk.",
+                btnDownload: "APK HERUNTERLADEN",
+                feat1Title: "Öko-Mining", feat1Desc: "Kein Akkuverbrauch. Keine Überhitzung. Nur Cloud-Power.",
+                feat2Title: "Community", feat2Desc: "Erhalten Sie einen +0,10-fachen Boost für jeden eingeladenen Freund.",
+                feat3Title: "Sichere Wallet", feat3Desc: "Verwalten Sie Ihr Vermögen mit erstklassigen Sicherheitsprotokollen."
+            },
+            fr: {
+                heroTitle: "MINEZ LE <br><span class='text-cyan-400'>FUTUR</span>",
+                heroDesc: "Commencez à miner des jetons BIT dès aujourd'hui. Réseau mobile rapide, sûr et efficace.",
+                btnDownload: "TÉLÉCHARGER APK",
+                feat1Title: "Éco-Minage", feat1Desc: "Pas de batterie déchargée. Pas de surchauffe. Puissance du cloud.",
+                feat2Title: "Communauté", feat2Desc: "Obtenez un boost de +0,10x pour chaque ami invité.",
+                feat3Title: "Portefeuille", feat3Desc: "Gérez vos actifs avec des protocoles de sécurité de haut niveau."
+            }
+        };
 
+        const switcher = document.getElementById('langSwitcher');
+        switcher.addEventListener('change', (e) => {
+            const lang = e.target.value;
+            document.getElementById('heroTitle').innerHTML = translations[lang].heroTitle;
+            document.getElementById('heroDesc').innerText = translations[lang].heroDesc;
+            document.getElementById('btnDownload').innerText = translations[lang].btnDownload;
+            document.getElementById('feat1Title').innerText = translations[lang].feat1Title;
+            document.getElementById('feat1Desc').innerText = translations[lang].feat1Desc;
+            document.getElementById('feat2Title').innerText = translations[lang].feat2Title;
+            document.getElementById('feat2Desc').innerText = translations[lang].feat2Desc;
+            document.getElementById('feat3Title').innerText = translations[lang].feat3Title;
+            document.getElementById('feat3Desc').innerText = translations[lang].feat3Desc;
+        });
+    </script>
 </body>
 </html>
