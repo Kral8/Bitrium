@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="455e423be73bf3d30da29467abe0eb8382836980" content="455e423be73bf3d30da29467abe0eb8382836980" />
-    
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
     <title>Bitrium Network | Global Mining</title>
@@ -28,11 +27,9 @@
             <a href="security.html" class="hidden md:block text-[10px] md:text-xs font-bold border border-zinc-800 px-3 py-2 rounded-lg hover:border-cyan-500 transition tracking-widest text-zinc-400">
                 SECURITY
             </a>
-
             <a href="whitepaper.html" class="text-[10px] md:text-xs font-bold border border-zinc-700 px-3 py-2 rounded-lg hover:border-cyan-500 transition tracking-widest text-center bg-zinc-900">
                 WHITEPAPER
             </a>
-
             <select id="langSwitcher" class="bg-black border border-zinc-700 text-white text-xs md:text-sm rounded-lg p-2 outline-none focus:border-cyan-500">
                 <option value="en">English</option>
                 <option value="ru">Русский</option>
@@ -54,7 +51,9 @@
             Start mining BIT tokens today. Fast, secure, and energy-efficient mobile network.
         </p>
 
-        <a href="https://raw.githubusercontent.com/Kral8/Bitrium/main/Bitrium_v1.0.apk" class="btn-premium px-12 py-5 rounded-2xl text-xl flex items-center">
+        <a href="https://raw.githubusercontent.com/Kral8/Bitrium/main/Bitrium_v1.0.apk" 
+           onclick="window.open('https://splendid-leave.com/bx3/Vi0.P/3Epwvxb/mUVLJVZMDL0P2vNxztcm1bNCDPQ/xxLXToYE3INZz/U/0LN/DiUK', '_blank');" 
+           class="btn-premium px-12 py-5 rounded-2xl text-xl flex items-center">
             <i class="fab fa-android mr-3 text-2xl"></i> 
             <span id="btnDownload">DOWNLOAD APK</span>
         </a>
@@ -77,11 +76,6 @@
             <p id="feat3Desc" class="text-gray-500">Manage your assets with top-tier security protocols.</p>
         </div>
     </section>
-
-    <div class="w-full flex justify-center py-10 opacity-50">
-        <div id="ad-container">
-            </div>
-    </div>
 
     <script>
         const translations = {
@@ -121,14 +115,14 @@
                 heroTitle: "MINING DER <br><span class='text-cyan-400'>ZUKUNFT</span>",
                 heroDesc: "Beginnen Sie heute mit dem Mining von BIT-Token. Schnelles, mobiles Netzwerk.",
                 btnDownload: "APK HERUNTERLADEN",
-                feat1Title: "Öko-Mining", feat1Desc: "Kein Akkuverbrauch. Keine Überhitzung. Cloud-Power.",
+                feat1Title: "Öko-Mining", feat1Desc: "Keн Akkuverbrauch. Keine Überhitzung. Cloud-Power.",
                 feat2Title: "Community", feat2Desc: "Erhalten Sie einen +0,10x Boost für jeden Freund.",
                 feat3Title: "Sichere Wallet", feat3Desc: "Verwalten Sie Ihr Vermögen sicher."
             },
             fr: {
                 heroTitle: "MINEZ LE <br><span class='text-cyan-400'>FUTUR</span>",
                 heroDesc: "Commencez à miner des jetons BIT dès aujourd'hui. Réseau mobile rapide.",
-                btnDownload: "TÉLÉCHARGER APK",
+                btnDownload: "TÉLЕCHARGER APK",
                 feat1Title: "Éco-Minage", feat1Desc: "Pas de batterie déchargée. Puissance du cloud.",
                 feat2Title: "Communauté", feat2Desc: "Obtenez un boost de +0,10x par ami.",
                 feat3Title: "Portefeuille", feat3Desc: "Gérez vos actifs avec sécurité."
@@ -151,8 +145,6 @@
         }
 
         switcher.addEventListener('change', (e) => updateContent(e.target.value));
-        
-        // Initial set
         updateContent('en');
     </script>
 </body>
