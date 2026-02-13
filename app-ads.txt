@@ -1,0 +1,12 @@
+# Appodeal
+appodeal.com, 261321, DIRECT
+
+# BidMachine
+bidmachine.io, 1, DIRECT
+bidmachine.io, 466, DIRECT
+
+# AdMob
+google.com, pub-4325810183182530, DIRECT, f08c47fec0942fa0
+
+# Yandex
+yandex.ru, 18724647, DIRECT
