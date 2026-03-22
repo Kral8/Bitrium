@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bitrium Network</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#6C63FF",
+            neon: "#00F0FF",
+            darkbg: "#0B0F1A"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: radial-gradient(circle at top, #0B0F1A, #05070F);
+    }
+    .glow {
+      box-shadow: 0 0 25px rgba(0,240,255,0.3);
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans">
+
+<!-- HEADER -->
+<header class="flex justify-between items-center p-6 max-w-7xl mx-auto">
+  <h1 class="text-2xl font-bold text-neon">Bitrium Network</h1>
+  <nav class="hidden md:flex gap-8 text-gray-300">
+    <a href="#" class="hover:text-white">Home</a>
+    <a href="#features" class="hover:text-white">Features</a>
+    <a href="#community" class="hover:text-white">Community</a>
+  </nav>
+  <button class="bg-primary px-4 py-2 rounded-xl hover:opacity-80">
+    Download APK
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="text-center py-20 px-6">
+  <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+    The Future of Cloud Mining <br>
+    <span class="text-neon">in Your Pocket</span>
+  </h2>
+  <p class="mt-6 text-gray-400 max-w-xl mx-auto">
+    Secure and easy cryptocurrency mining directly on your Android device.
+    No hardware. No complexity.
+  </p>
+
+  <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
+    <button class="bg-neon text-black px-6 py-3 rounded-xl font-semibold hover:opacity-80">
+      Google Play
+    </button>
+    <button class="border border-neon px-6 py-3 rounded-xl hover:bg-neon hover:text-black transition">
+      Direct Download
+    </button>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6 py-12">
+  <div class="bg-[#111827] p-6 rounded-2xl text-center glow">
+    <h3 class="text-3xl font-bold text-neon">10k+</h3>
+    <p class="text-gray-400">Active Users</p>
+  </div>
+  <div class="bg-[#111827] p-6 rounded-2xl text-center glow">
+    <h3 class="text-3xl font-bold text-neon">500k+</h3>
+    <p class="text-gray-400">Blocks Mined</p>
+  </div>
+  <div class="bg-[#111827] p-6 rounded-2xl text-center glow">
+    <h3 class="text-3xl font-bold text-neon">1200+</h3>
+    <p class="text-gray-400">Nodes</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="py-20 px-6 max-w-7xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-12">Features</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    
+    <div class="bg-[#111827] p-6 rounded-2xl glow">
+      <i data-lucide="cloud" class="w-10 h-10 text-neon"></i>
+      <h3 class="mt-4 text-xl font-semibold">Cloud Technology</h3>
+      <p class="text-gray-400 mt-2">
+        Mine crypto using powerful cloud infrastructure without draining your device.
+      </p>
+    </div>
+
+    <div class="bg-[#111827] p-6 rounded-2xl glow">
+      <i data-lucide="shield" class="w-10 h-10 text-neon"></i>
+      <h3 class="mt-4 text-xl font-semibold">Secure Wallet</h3>
+      <p class="text-gray-400 mt-2">
+        Advanced encryption ensures your assets are always safe and protected.
+      </p>
+    </div>
+
+    <div class="bg-[#111827] p-6 rounded-2xl glow">
+      <i data-lucide="gift" class="w-10 h-10 text-neon"></i>
+      <h3 class="mt-4 text-xl font-semibold">Daily Rewards</h3>
+      <p class="text-gray-400 mt-2">
+        Earn daily rewards and maximize your passive income effortlessly.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- APP PREVIEW -->
+<section class="py-20 text-center px-6">
+  <h2 class="text-3xl font-bold mb-10">App Preview</h2>
+
+  <div class="flex justify-center">
+    <div class="w-64 h-[500px] bg-[#111827] rounded-3xl glow flex items-center justify-center">
+      <span class="text-gray-500">App Screenshot</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="community" class="border-t border-gray-800 mt-20 py-10 px-6">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    
+    <div class="text-gray-400">
+      © 2026 Bitrium Network. All rights reserved.
+    </div>
+
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-neon"><i data-lucide="send"></i></a>
+      <a href="#" class="hover:text-neon"><i data-lucide="twitter"></i></a>
+    </div>
+
+    <div class="flex gap-6 text-gray-400">
+      <a href="#" class="hover:text-white">Privacy Policy</a>
+      <a href="#" class="hover:text-white">Terms of Use</a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
