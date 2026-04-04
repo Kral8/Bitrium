@@ -1,159 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bitrium Network</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bitrium Network</title>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#6C63FF",
-            neon: "#00F0FF",
-            darkbg: "#0B0F1A"
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    body {
-      background: radial-gradient(circle at top, #0B0F1A, #05070F);
-    }
-    .glow {
-      box-shadow: 0 0 25px rgba(0,240,255,0.3);
-    }
-  </style>
+<style>
+body {
+  background: radial-gradient(circle at top, #0B0F1A, #03050A);
+}
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.glow {
+  box-shadow: 0 0 40px rgba(0,240,255,0.15);
+}
+</style>
 </head>
 
 <body class="text-white font-sans">
 
 <!-- HEADER -->
 <header class="flex justify-between items-center p-6 max-w-7xl mx-auto">
-  <h1 class="text-2xl font-bold text-neon">Bitrium Network</h1>
-  <nav class="hidden md:flex gap-8 text-gray-300">
-    <a href="#" class="hover:text-white">Home</a>
-    <a href="#features" class="hover:text-white">Features</a>
-    <a href="#community" class="hover:text-white">Community</a>
-  </nav>
-  <button class="bg-primary px-4 py-2 rounded-xl hover:opacity-80">
-    Download APK
+  <h1 class="text-2xl font-bold text-cyan-400">Bitrium Network</h1>
+  <button onclick="openModal()" class="text-gray-400 hover:text-white">
+    Terms
   </button>
 </header>
 
 <!-- HERO -->
-<section class="text-center py-20 px-6">
-  <h2 class="text-4xl md:text-6xl font-bold leading-tight">
-    The Future of Cloud Mining <br>
-    <span class="text-neon">in Your Pocket</span>
+<section class="text-center py-24 px-6">
+  <h2 class="text-5xl md:text-6xl font-bold leading-tight">
+    Smart Digital Rewards <br>
+    <span class="text-cyan-400">Powered by Participation</span>
   </h2>
+
   <p class="mt-6 text-gray-400 max-w-xl mx-auto">
-    Secure and easy cryptocurrency mining directly on your Android device.
-    No hardware. No complexity.
+    Engage with the platform and receive digital rewards.  
+    Simple, secure, and accessible from anywhere.
   </p>
 
-  <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
-    <button class="bg-neon text-black px-6 py-3 rounded-xl font-semibold hover:opacity-80">
-      Google Play
+  <div class="mt-10 flex flex-col md:flex-row justify-center gap-4">
+    <button class="bg-cyan-400 text-black px-6 py-3 rounded-xl font-semibold hover:opacity-80">
+      Get Started
     </button>
-    <button class="border border-neon px-6 py-3 rounded-xl hover:bg-neon hover:text-black transition">
-      Direct Download
+    <button onclick="openModal()" class="border border-cyan-400 px-6 py-3 rounded-xl hover:bg-cyan-400 hover:text-black transition">
+      Learn More
     </button>
   </div>
-</section>
 
-<!-- STATS -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6 py-12">
-  <div class="bg-[#111827] p-6 rounded-2xl text-center glow">
-    <h3 class="text-3xl font-bold text-neon">10k+</h3>
-    <p class="text-gray-400">Active Users</p>
-  </div>
-  <div class="bg-[#111827] p-6 rounded-2xl text-center glow">
-    <h3 class="text-3xl font-bold text-neon">500k+</h3>
-    <p class="text-gray-400">Blocks Mined</p>
-  </div>
-  <div class="bg-[#111827] p-6 rounded-2xl text-center glow">
-    <h3 class="text-3xl font-bold text-neon">1200+</h3>
-    <p class="text-gray-400">Nodes</p>
-  </div>
+  <p class="mt-6 text-xs text-gray-500">
+    This app does not guarantee any financial earnings.
+  </p>
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="py-20 px-6 max-w-7xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-12">Features</h2>
+<section class="py-20 px-6 max-w-7xl mx-auto">
+  <h2 class="text-3xl font-bold text-center mb-12">Platform Features</h2>
 
   <div class="grid md:grid-cols-3 gap-8">
-    
-    <div class="bg-[#111827] p-6 rounded-2xl glow">
-      <i data-lucide="cloud" class="w-10 h-10 text-neon"></i>
-      <h3 class="mt-4 text-xl font-semibold">Cloud Technology</h3>
+
+    <div class="glass p-6 rounded-2xl glow">
+      <i data-lucide="activity" class="w-10 h-10 text-cyan-400"></i>
+      <h3 class="mt-4 text-xl font-semibold">Participation System</h3>
       <p class="text-gray-400 mt-2">
-        Mine crypto using powerful cloud infrastructure without draining your device.
+        Earn digital rewards through consistent engagement.
       </p>
     </div>
 
-    <div class="bg-[#111827] p-6 rounded-2xl glow">
-      <i data-lucide="shield" class="w-10 h-10 text-neon"></i>
-      <h3 class="mt-4 text-xl font-semibold">Secure Wallet</h3>
+    <div class="glass p-6 rounded-2xl glow">
+      <i data-lucide="shield" class="w-10 h-10 text-cyan-400"></i>
+      <h3 class="mt-4 text-xl font-semibold">Secure Environment</h3>
       <p class="text-gray-400 mt-2">
-        Advanced encryption ensures your assets are always safe and protected.
+        Built with modern security practices and data protection.
       </p>
     </div>
 
-    <div class="bg-[#111827] p-6 rounded-2xl glow">
-      <i data-lucide="gift" class="w-10 h-10 text-neon"></i>
-      <h3 class="mt-4 text-xl font-semibold">Daily Rewards</h3>
+    <div class="glass p-6 rounded-2xl glow">
+      <i data-lucide="layers" class="w-10 h-10 text-cyan-400"></i>
+      <h3 class="mt-4 text-xl font-semibold">Scalable System</h3>
       <p class="text-gray-400 mt-2">
-        Earn daily rewards and maximize your passive income effortlessly.
+        Designed for future expansion and ecosystem growth.
       </p>
     </div>
 
-  </div>
-</section>
-
-<!-- APP PREVIEW -->
-<section class="py-20 text-center px-6">
-  <h2 class="text-3xl font-bold mb-10">App Preview</h2>
-
-  <div class="flex justify-center">
-    <div class="w-64 h-[500px] bg-[#111827] rounded-3xl glow flex items-center justify-center">
-      <span class="text-gray-500">App Screenshot</span>
-    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer id="community" class="border-t border-gray-800 mt-20 py-10 px-6">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-    
-    <div class="text-gray-400">
-      © 2026 Bitrium Network. All rights reserved.
-    </div>
-
-    <div class="flex gap-6">
-      <a href="#" class="hover:text-neon"><i data-lucide="send"></i></a>
-      <a href="#" class="hover:text-neon"><i data-lucide="twitter"></i></a>
-    </div>
-
-    <div class="flex gap-6 text-gray-400">
-      <a href="#" class="hover:text-white">Privacy Policy</a>
-      <a href="#" class="hover:text-white">Terms of Use</a>
-    </div>
-
+<footer class="border-t border-gray-800 mt-20 py-10 px-6 text-center text-gray-500">
+  © 2026 Bitrium Network  
+  <div class="mt-4 flex justify-center gap-6">
+    <button onclick="openModal()">Privacy Policy</button>
+    <button onclick="openModal()">Terms of Use</button>
   </div>
 </footer>
 
+<!-- MODAL -->
+<div id="modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center p-4 z-50">
+  <div class="glass max-w-2xl w-full rounded-2xl p-6 max-h-[80vh] overflow-y-auto">
+
+    <h2 class="text-xl font-bold mb-4">Terms & Privacy</h2>
+
+    <p class="text-gray-400 text-sm">
+      <strong>Terms of Use</strong><br><br>
+
+      Bitrium Network is a digital platform where users receive virtual rewards based on participation.<br><br>
+
+      We do not guarantee any earnings, profits, or financial outcomes.<br><br>
+
+      All rewards are virtual and do not represent real monetary value.<br><br>
+
+      This app is not an investment platform.<br><br>
+
+      <strong>Privacy Policy</strong><br><br>
+
+      We collect limited data such as device info and usage analytics to improve the app.<br><br>
+
+      We do not sell your personal data.<br><br>
+
+      Third-party services may be used for analytics and ads.<br><br>
+
+      Your data is protected using standard security practices.
+    </p>
+
+    <button onclick="closeModal()" class="mt-6 w-full bg-cyan-400 text-black py-2 rounded-xl">
+      I Understand
+    </button>
+
+  </div>
+</div>
+
 <script>
-  lucide.createIcons();
+lucide.createIcons();
+
+function openModal() {
+  document.getElementById('modal').classList.remove('hidden');
+  document.getElementById('modal').classList.add('flex');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.add('hidden');
+}
 </script>
 
 </body>
